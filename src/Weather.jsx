@@ -1,5 +1,7 @@
+import './Weather.css'
 import React, { useState } from 'react'
 useState
+
 
 const api = {
   key: "54b0ae8683301acb95b2fba97ddbd143",
@@ -56,7 +58,7 @@ const Weather = () => {
   return (
     <div>
       <main>
-        <div className='search-bar'>
+        <div className='search-box'>
           <input type="text" className='search-bar' placeholder='Search...'
             value={query}
             onKeyPress={search}
