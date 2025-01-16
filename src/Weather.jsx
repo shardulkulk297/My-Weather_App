@@ -4,7 +4,7 @@ useState
 
 
 const api = {
-  key: "54b0ae8683301acb95b2fba97ddbd143",
+  key: import.meta.env.VITE_WEATHER,
   base: "https://api.openweathermap.org/data/2.5/"
 
 }
@@ -59,7 +59,7 @@ const Weather = () => {
     <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ? 'app-warm': 'app') : 'app'}>
       <main>
         <div className='search-box'>
-          <input type="text" className='search-bar' placeholder='Search...'
+          <input type="text" className='search-bar' placeholder='Enter City Name...'
             value={query}
             onKeyPress={search}
             onChange={(e) => {
